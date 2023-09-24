@@ -1,0 +1,15 @@
+{
+  "name": "angularjs-project",
+  "version": "1.0.0",
+  "description": "student list",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "lite" : "lite-server"
+  },
+  "author": "Sagar Joshi",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
