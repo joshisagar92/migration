@@ -10,13 +10,16 @@ import { BlankComponent } from './components/blank/blank.component';
 import { StudentViewComponent } from './components/student-view/student-view.component';
 import { installDowngradedAngularJsComponenet } from './downgrade-angular-js';
 import { ModalService } from './service/modal-service.service';
+import { BootstrapModalComponent } from './components/bootstrap-modal/bootstrap-modal.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentViewComponent
+    StudentViewComponent,
+    BlankComponent,
+    BootstrapModalComponent
   ],
   imports: [
     BrowserModule,

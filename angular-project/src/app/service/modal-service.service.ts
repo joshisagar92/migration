@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
-
+import { Subject } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ModalService {
-
-  //private componentMethodCallSource = new Subject<any>();
-  //componentMethodCalled$ = this.componentMethodCallSource.asObservable();
+  
+  observer = new Subject();
+  public subscriber$ = this.observer.asObservable();
 
 
   constructor() { }
 
   openModel(){
     console.log("openlog called....")
-    //this.componentMethodCallSource.next("hello");
+    this.observer.next("open");
   }
 
 }
