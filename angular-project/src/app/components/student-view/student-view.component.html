@@ -1,0 +1,22 @@
+<div  id="studentView">
+   <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Actions</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        
+                      <tr *ngFor="let student of students; let i = index;">
+                        <th scope="row">{{i + 1}}</th>
+                        <td *ngIf="!editMode ">{{student.name}}</td>
+                        <td *ngIf="editMode" ><input type="text" class="input form-control" /> <button (click)="saveEdit()">Save</button></td>
+                        <td *ngIf="!editMode"><button (click)="editStudent(i)">Edit</button></td>    
+                        <td><button (click)="deleteStudent()">Delete</button></td>    
+                      </tr>
+                    </tbody>
+                  </table>
+</div>

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="StudentController"> 
 	<h2> Welcome </h2>
 	<p>{{message}}</p>
 	
@@ -21,11 +21,15 @@
 				<button type="button" class="btn btn-secondary" ng-click="loadStudentListView()">Student List View</button>
 				
 
+
 			</div>
 			
 		  </div>
 		</div>
 	  </div>
+
+	  <div ng-include="studentListView"></div>
+
 	  
 	
 </div>

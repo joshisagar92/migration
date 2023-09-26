@@ -1,0 +1,45 @@
+<div  id="studentView">
+    <div ng-controller="studentListViewController">
+
+        <div class="modal" id="studentListViewModal"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Student List View</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+               <div>
+                
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Actions</th>
+                        <th scope="col">Actions</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="student in students track by $index">
+                        <th scope="row">{{$index + 1}}</th>
+                        <td ng-show = "!editMode ">{{student.name}}</td>
+                        <td ng-show = "editMode && $index == current_index" ><input type="text" class="input form-control" ng-model="student.name"/> <button ng-click="saveEdit()">Save</button></td>
+                        <td ng-show = "!editMode"><button ng-click="editStudent($index)">Edit</button></td>    
+                        <td><button ng-click="deleteStudent()">Delete</button></td>    
+
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+
+                
+
+               </div>
+              </div>
+            </div>
+
+    </div>>
+</div>
