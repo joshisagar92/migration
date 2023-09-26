@@ -113,11 +113,8 @@ class AppModule {
   ngDoBootstrap(appRef) {
     appRef.bootstrap(_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent);
     (0,_downgrade_angular_js__WEBPACK_IMPORTED_MODULE_3__.installDowngradedAngularJsComponenet)();
-    this.upgrade.bootstrap(document.getElementById("studentApp"), ["studentApp", "ngRoute", "oc.lazyLoad"]);
-    //setUpModalWrapper()
-    this.bootstrapAngularjs();
+    this.upgrade.bootstrap(document.getElementById("studentApp"), ["studentApp", "ngRoute", "oc.lazyLoad", "studentAppAngular"]);
   }
-  bootstrapAngularjs() {}
 }
 _class = AppModule;
 _class.ɵfac = function AppModule_Factory(t) {

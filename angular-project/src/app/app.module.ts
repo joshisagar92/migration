@@ -40,16 +40,8 @@ export class AppModule implements DoBootstrap {
 
   ngDoBootstrap(appRef: ApplicationRef): void {
     appRef.bootstrap(AppComponent)
-    
-    
     installDowngradedAngularJsComponenet()
-    this.upgrade.bootstrap(document.getElementById("studentApp") as Element,["studentApp","ngRoute","oc.lazyLoad"]) 
-    //setUpModalWrapper()
-    this.bootstrapAngularjs()
-    
+    this.upgrade.bootstrap(document.getElementById("studentApp") as Element,["studentApp","ngRoute","oc.lazyLoad","studentAppAngular"]) 
   }
 
-  private bootstrapAngularjs(){
-    
-  }
 }

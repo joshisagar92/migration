@@ -49,7 +49,7 @@
 				});
 		});
 
-		mainApp.controller('StudentController', function($scope,$ocLazyLoad) {
+		mainApp.controller('StudentController', function($scope,$ocLazyLoad, modalService) {
 			
 
 			$scope.openModal = function(){
@@ -60,18 +60,18 @@
 
 			$scope.loadStudentListView = function(){
 				
-
-				$ocLazyLoad.load({
-					name:'studentListViewModal',
-					files:['studentListView.js']				
-				}).then(function(e){
-					console.log( e)
-					let url = 'studentListView.html';
-					$scope.studentListView = url;
-				},
-				function(e){
-					console.log(e)
-				})
+				modalService.openModel()
+				//$ocLazyLoad.load({
+			//		name:'studentListViewModal',
+			//		files:['studentListView.js']				
+			//	}).then(function(e){
+			//		console.log( e)
+			//		let url = 'studentListView.html';
+			//		$scope.studentListView = url;
+			//	},
+			//	function(e){
+			//		console.log(e)
+			//	})
 				
 				
 			}
